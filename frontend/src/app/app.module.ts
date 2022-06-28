@@ -4,15 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SuiModule } from 'ng2-semantic-ui';
-import { NavbarComponent } from './navbar/navbar.component';
-import { CardComponent } from './card/card.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
-import { SignInComponent } from './sign-in/sign-in.component';
-import { OnViewComponent } from './on-view/on-view.component';
-import { SplashComponent } from './splash/splash.component';
-import { SearchComponent } from './search/search.component';
-import { ErrorPageComponent } from './error-page/error-page.component';
-import { BackButtonComponent } from './back-button/back-button.component';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
+import { BackButtonComponent } from './components/back-button/back-button.component';
+import { CardComponent } from './components/card/card.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { OnViewComponent } from './components/on-view/on-view.component';
+import { SearchComponent } from './components/search/search.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { SplashComponent } from './components/splash/splash.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { BackButtonComponent } from './back-button/back-button.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SuiModule
+    SuiModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
