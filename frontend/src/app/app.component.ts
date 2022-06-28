@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'frontend';
+  count: number = 0;
+
+  IncrementEvent() {
+        this.count++;
+    }
+    DecrementEvent() {
+        this.count--;
+    }
 }
