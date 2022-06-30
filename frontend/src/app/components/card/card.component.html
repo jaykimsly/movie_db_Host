@@ -11,21 +11,23 @@
     <div class="col-6 col-md-4 col-lg-2 col-xl-2" *ngFor="let movie of Movies; let i = index">
       <br>
      <div class="card">
-      <img class="card-img-top" src="holder.js/100x180/" alt="">
+      <img class="card-img-top" src='https://image.tmdb.org/t/p/original{{movie.backdrop_path}}' alt="">
       <div class="card-body">
 
-        <!-- <h4 class="card-title">Title</h4>
-        <p class="card-text">Text</p> -->
-
-        <!-- test -->
+      <h4 class="card-title">Movie Title:{{ movie.original_title}}</h4>
+        <p class="card-text">Description:{{ movie.overview}}</p> 
+        <p class="card-text">Release Date: {{ movie.release_date}}</p>
+        <p class="card-text">Language: {{movie.original_language}}</p>
+          <p class="card-text">Vote Avarage: {{movie.vote_avarage}}</p>
 
       
-    <div>
-      <!-- <h4 class="card-title">M</h4> -->
-    <p class="Main-Text" title="Avengers">
-      Hover to know more movie.
+    <!-- <div>
+  
+    <p class="" title="Avengers">
+      This movie was relieased on : {{movie.release_date}}
+      
     </p>
-    </div>
+    </div> -->
 
 
       </div>
