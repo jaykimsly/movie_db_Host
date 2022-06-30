@@ -1,1 +1,29 @@
-<p>search works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="searchBox">
+            <input (keyup) = "onSubmit($event"
+            [(ngModel)]="searchValue" type="type"
+            id="searchKey" class="form-control"
+            placeholder="Search Movie" />
+        </div>
+        <div *ngIf="condition; then block1; else block2">
+        </div>
+        <ng-template #block1>
+            <i class="fa fa-spinner fa-spin" aria-hidden="true">
+            </i> Searhing your results for
+            <strong>{{prevText}}</strong>
+        </ng-template>
+        <ng-template #block2>
+            <h6>{{res_cnt}} Search results found
+                <span *ngFor="let lang for res_list">
+                    <strong>{{lang}}, </strong></span>
+            </h6>
+        </ng-template>
+       </div>
+    </div>
+</div>
+
+    
+
