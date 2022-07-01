@@ -14,6 +14,7 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { SplashComponent } from './components/splash/splash.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -33,6 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     SuiModule,
+    FormsModule,                               // <========== Add this line!
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],
