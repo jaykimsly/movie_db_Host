@@ -1,18 +1,20 @@
 // .card-body , h4:hover:hover {
-//     visibility: visible;
+//     visibility: invisible;
 //   }
   
-// .card-body {
-//    img:hover {
-//     opacity: 0.5;
-//   }
+.card-body 
+   img:hover {
+    opacity: 0.5;
+}
 
-//   .this-is-your-class img:hover {
-//     opacity: 0.5;
-//   }
+.card-img-top:hover {
+  opacity: 0.5;
+  .card-body {visibility: visible;}
 
-  .card-body:hover {
-    opacity: 0.3;
+}
+
+.card-img-top {
+    .card-body {visibility: hidden;}
   }
 
   .Main-Text{
