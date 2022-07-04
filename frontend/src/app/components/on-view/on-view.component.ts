@@ -6,8 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./on-view.component.scss']
 })
 export class OnViewComponent implements OnInit {
+  
 
-  movie = {
+  /*movie = {
     "adult": false,
     "backdrop_path": "/wcKFYIiVDvRURrzglV9kGu7fpfY.jpg",
     "genre_ids": [ 14,28,12],
@@ -26,8 +27,16 @@ export class OnViewComponent implements OnInit {
     "Director": "Anthony Russo",
     "Country" : "United States",
     "cast": "Robert Downey Jr. · Chris Evans · Mark Ruffalo · Chris Hemsworth · Scarlett Johansson · Jeremy Renner ·Don Cheadle · Paul Rudd."
-}
-  constructor() { }
+}*/
+
+movie!:any;
+constructor() {
+
+  let movie:any;
+  movie = localStorage.getItem("movie");
+
+  this.movie = JSON.parse(movie)
+ }
 
   ngOnInit(): void {
   }

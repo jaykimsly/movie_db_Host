@@ -19,5 +19,8 @@ export class LatestMoviesPageComponent implements OnInit {
   })
     
   }
+  getMovieInfo(index:any){
+    localStorage.setItem("movie", JSON.stringify(this.Movies[index]))
+  }
  
 }
