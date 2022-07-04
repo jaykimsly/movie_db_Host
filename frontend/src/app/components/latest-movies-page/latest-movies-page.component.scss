@@ -1,0 +1,18 @@
+.card-body 
+   img:hover {
+    opacity: 0.5;
+}
+
+.card-img-top:hover {
+  opacity: 0.5;
+  .card-body {visibility: visible;}
+
+}
+
+.card-img-top {
+    .card-body {visibility: hidden;}
+  }
+
+  .Main-Text{
+    background-color: aqua;
+  }

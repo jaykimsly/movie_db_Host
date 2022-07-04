@@ -20,4 +20,9 @@ export class CardComponent implements OnInit {
     })
   }
 
+
+  getMovieInfo(index:any){
+    localStorage.setItem("movie",JSON.stringify(this.Movies[index])) 
+  }
+
 }
