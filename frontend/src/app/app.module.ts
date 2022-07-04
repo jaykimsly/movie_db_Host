@@ -15,6 +15,8 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { SplashComponent } from './components/splash/splash.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SuggestionsPageComponent } from './components/suggestions-page/suggestions-page.component';
+import { LatestMoviesPageComponent } from './components/latest-movies-page/latest-movies-page.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SplashComponent,
     SearchComponent,
     ErrorPageComponent,
-    BackButtonComponent
+    BackButtonComponent,
+    SuggestionsPageComponent,
+    LatestMoviesPageComponent
   ],
   imports: [
     BrowserModule,
