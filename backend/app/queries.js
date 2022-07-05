@@ -7,12 +7,12 @@ const pool = new Pool({                                                         
     user: 'dam142',                                                              //init user to admin
     host: 'localhost',                                                          //
     database: 'moviedb',                                                        //
-    password: '0000',                                                     //
+    password: '0000',                                                           //
     port:5432                                                                   //
 });
 
 const getUser = (req,res) =>{                                                   //function for getting all users from the database
-    pool.query('SELECT * From movies', (error, results)=> {      //query for fetching all users and sorting them in ascending order
+    pool.query('SELECT * From movies', (error, results)=> {                         //query for fetching all users and sorting them in ascending order
         if (error){                                                                 //checkin for error 
             throw error                                                             //throwing the error
         }
@@ -30,12 +30,13 @@ const getUser = (req,res) =>{                                                   
 //     })
 // };
 const createUser = (req,res) => {
-    const {backdrop_path , genre_ids , original_language , original_title , overview , popularity , poster_path , release_date , title , video , vote_avarage,vote_count} = req.body;
-    pool.query ('INSERT INTO movies (backdrop_path , genre_ids , original_language , original_title , overview , popularity , poster_path , release_date , title , video , vote_avarage,vote_count) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12) ',[backdrop_path , genre_ids , original_language , original_title , overview , popularity , poster_path , release_date , title , video , vote_avarage,vote_count],(error,results)=>{
+    const {backdrop_path , genre_ids , original_language , original_title , overview , popularity , poster_path , 
+        release_date , title , video , vote_average,vote_count} = req.body;
+    pool.query ('INSERT INTO movies (backdrop_path , genre_ids , original_language , original_title , overview , popularity , poster_path , release_date , title , video , vote_average,vote_count) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12) ',[backdrop_path , genre_ids , original_language , original_title , overview , popularity , poster_path , release_date , title , video , vote_average,vote_count],(error,results)=>{
         if(error){
             throw error
         }
-        res.status(201).send(`user added with ID :${results.rows[0].id}`);
+        res.status(201).send(`user added with ID :${results.rows[0]}`);
         
     });
 };
