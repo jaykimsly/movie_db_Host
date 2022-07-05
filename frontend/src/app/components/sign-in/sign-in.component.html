@@ -1,4 +1,4 @@
-<div class="col-md-12">
+<!-- <div class="col-md-12">
     <div class="card card-container">
       <img
         id="profile-img"
@@ -74,4 +74,48 @@
       </div>
     </div>
   </div>
-  
+   -->
+
+   
+
+  <div class="container-">
+    <div class="row">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="https://cdn.discordapp.com/attachments/988341679436214302/993811947344629810/unknown.png"
+          class="img-fluid" alt="Sample image">
+      </div>
+
+
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-2 ">
+        <img id="profile-img" src="https://i.pinimg.com/236x/1e/a5/8f/1ea58fc8074dbd846e5130729d90fc8c.jpg"
+          class="profile-img-card" />
+        <form>
+
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form3Example3">Username</label>
+            <input type="email" id="form3Example3" class="form-control form-control-lg" />
+
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-3">
+            <label class="form-label" for="form3Example4">Password</label>
+            <input type="password" id="form3Example4" class="form-control form-control-lg" />
+
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <!-- Checkbox -->
+          </div>
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="button" class="btn" style="padding-left: 2.5rem; padding-right: 2.5rem;">Sign in</button>
+            <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a class="link-danger"
+                [routerLink]="['/sign-up']" routerLinkActive="router-link-active"> Sign-up</a></p>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
