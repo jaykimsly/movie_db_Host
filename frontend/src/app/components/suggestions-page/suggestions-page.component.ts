@@ -12,11 +12,14 @@ export class SuggestionsPageComponent implements OnInit {
   constructor(private card_service: CardService) { }
 
   ngOnInit(): void {
-    this.card_service.getCards().subscribe(( respond:any )=>{
+    this.card_service.getSug().subscribe(( respond:any )=>{
       console.log(respond.results)
 
       this.Movies = respond.results;
     })
+  }
+  getMovieInfo(index:any){
+    localStorage.setItem("movie", JSON.stringify(this.Movies[index]))
   }
 
 }
