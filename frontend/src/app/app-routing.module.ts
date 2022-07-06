@@ -15,10 +15,10 @@ const routes: Routes = [
   {path: 'sign-up', component: SignUpComponent},
   {path: 'error-page', component: ErrorPageComponent},
   {path: 'view', component: OnViewComponent},
-  {path: 'movies', component: CardComponent},
+  {path: '', component: CardComponent},
   {path: 'latest-movies', component: LatestMoviesPageComponent},
   {path: 'suggestions', component: SuggestionsPageComponent},
-  {path: '', component: SplashComponent}
+  {path: 'splash', component: SplashComponent}
 ];
 
 @NgModule({
