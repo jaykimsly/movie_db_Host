@@ -14,11 +14,11 @@ const routes: Routes = [
   {path: 'sign-in', component: SignInComponent},
   {path: 'sign-up', component: SignUpComponent},
   {path: 'error-page', component: ErrorPageComponent},
-  {path: 'splash', component: SplashComponent},
   {path: 'view', component: OnViewComponent},
-  {path: 'movies', component: CardComponent},
+  {path: '', component: CardComponent},
   {path: 'latest-movies', component: LatestMoviesPageComponent},
-  {path: 'suggestions', component: SuggestionsPageComponent}
+  {path: 'suggestions', component: SuggestionsPageComponent},
+  {path: 'splash', component: SplashComponent}
 ];
 
 @NgModule({
