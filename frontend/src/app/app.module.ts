@@ -17,6 +17,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SuggestionsPageComponent } from './components/suggestions-page/suggestions-page.component';
 import { LatestMoviesPageComponent } from './components/latest-movies-page/latest-movies-page.component';
+// import { ActionComponent } from './components/action/action.component';
+// import { ComedyComponent } from './components/comedy/comedy.component';
+// import { DramaComponent } from './components/drama/drama.component';
+// import { FamilyComponent } from './components/family/family.component';
+// import { KidsComponent } from './components/kids/kids.component';
 
 
 @NgModule({
@@ -32,7 +37,12 @@ import { LatestMoviesPageComponent } from './components/latest-movies-page/lates
     ErrorPageComponent,
     BackButtonComponent,
     SuggestionsPageComponent,
-    LatestMoviesPageComponent
+    LatestMoviesPageComponent,
+    // ActionComponent,
+    // ComedyComponent,
+    // DramaComponent,
+    // FamilyComponent,
+    // KidsComponent
   ],
   imports: [
     BrowserModule,
