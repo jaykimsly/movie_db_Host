@@ -2,5 +2,8 @@
   "devDependencies": {
     "@types/jest": "^28.1.4",
     "tslib": "^2.4.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5"
   }
 }

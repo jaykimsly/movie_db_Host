@@ -11,11 +11,12 @@ const pool = new Pool({                                                         
     port:5432                                                                   //
 });
 
-const getUser = (req,res) =>{                                                   //function for getting all users from the database
+const getMovie = (req,res) =>{                                                   //function for getting all users from the database
     pool.query('SELECT * From movies', (error, results)=> {                         //query for fetching all users and sorting them in ascending order
         if (error){                                                                 //checkin for error 
             throw error                                                             //throwing the error
         }
+        res.set('Access-Control-Allow-Origin', 'http://localhost:3000');
         res.status(200).json(results.rows)                                          //fetching the results if the connection to database is succefull
     })
 };
@@ -29,7 +30,7 @@ const getUser = (req,res) =>{                                                   
 //         res.status(200).json(results.rows)                                      //fetching the results if the connection to database is succefull
 //     })
 // };
-const createUser = (req,res) => {
+const createMovie = (req,res) => {
     const {backdrop_path , genre_ids , original_language , original_title , overview , popularity , poster_path , 
         release_date , title , video , vote_average,vote_count} = req.body;
     pool.query ('INSERT INTO movies (backdrop_path , genre_ids , original_language , original_title , overview , popularity , poster_path , release_date , title , video , vote_average,vote_count) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12) ',[backdrop_path , genre_ids , original_language , original_title , overview , popularity , poster_path , release_date , title , video , vote_average,vote_count],(error,results)=>{
@@ -62,9 +63,9 @@ const createUser = (req,res) => {
 //     })
 // };
 module.exports = {
-    getUser,
+    getMovie,
     // getUserById,
-    createUser
+    createMovie
     // deleteUser,
     // updateUser
 }

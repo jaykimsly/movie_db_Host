@@ -17,6 +17,7 @@ export class CardComponent implements OnInit {
         console.log(respond.results)
 
         this.Movies = respond.results;
+        console.log(this.Movies)
     })
   }
 
