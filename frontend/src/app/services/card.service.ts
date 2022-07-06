@@ -11,7 +11,7 @@ export class CardService {
   //   throw new Error('Method not implemented.');
   // }
   
-  baseUrl = "https://api.themoviedb.org/3/discover/movie?api_key=80a33826576591aad78e11cfbde39527&&primary_release_year=2022";
+  baseUrl = "localhost:3000/movies";
   //APIbaseUrl = "https://api.themoviedb.org/3/discover/movie?api_key=80a33826576591aad78e11cfbde39527&&primary_release_year=2022";
   popUrl = "https://api.themoviedb.org/3/discover/movie?api_key=80a33826576591aad78e11cfbde39527";
   sugUrl = "https://api.themoviedb.org/3/discover/movie?api_key=80a33826576591aad78e11cfbde39527&&primary_release_year=2019";
