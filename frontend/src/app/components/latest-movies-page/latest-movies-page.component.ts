@@ -12,15 +12,15 @@ export class LatestMoviesPageComponent implements OnInit {
   constructor(private card_service: CardService) { }
 
   ngOnInit(): void {
-    this.card_service.getCards().subscribe(( respond:any )=>{
+    this.card_service.getPop().subscribe(( respond:any )=>{
       console.log(respond.results)
 
       this.Movies = respond.results;
   })
     
   }
-  getMovieInfo(index:any){
-    localStorage.setItem("movie", JSON.stringify(this.Movies[index]))
+   getMovieInfo(index:any){
+    localStorage.setItem("movie",JSON.stringify(this.Movies[index])) 
   }
  
 }
