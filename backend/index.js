@@ -3,13 +3,23 @@ const bodyparser = require('body-parser');
 const app = express();
 const cors=require('cors');
 
+var corsOptions = {
+   origin: "http://localhost:4200"
+}
+
 const port = 3000; 
 const db = require('../backend/app/queries');
 
-app.use(cors())
+app.use(cors(corsOptions))
 app.use(bodyparser.json());
+app.use(express.json());
 app.use(
     bodyparser.urlencoded({
+        extended: true,
+    })
+)
+app.use(
+    express.urlencoded({
         extended: true,
     })
 )

@@ -7,14 +7,13 @@ import { Injectable } from '@angular/core';
 })
 export class CardService {
   
-  // getKids() {
-  //   throw new Error('Method not implemented.');
-  // }
   
-  baseUrl = "localhost:3000/movies";
+  
+  baseUrl = "http://localhost:3000/movies";
   //APIbaseUrl = "https://api.themoviedb.org/3/discover/movie?api_key=80a33826576591aad78e11cfbde39527&&primary_release_year=2022";
   popUrl = "https://api.themoviedb.org/3/discover/movie?api_key=80a33826576591aad78e11cfbde39527";
   sugUrl = "https://api.themoviedb.org/3/discover/movie?api_key=80a33826576591aad78e11cfbde39527&&primary_release_year=2019";
+  
   constructor(private http: HttpClient) { }
   
 
@@ -27,13 +26,6 @@ export class CardService {
   getSug(){
     return this.http.get(this.sugUrl);
   }
-  // getCardAPI(){
-  //   return this.http.get(this.APIbaseUrl);
-  // }
-
-  // Dropdown 
-
-
   getAction(){
     return this.http.get(this.baseUrl);
   }

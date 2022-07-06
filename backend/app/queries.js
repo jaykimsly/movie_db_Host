@@ -16,7 +16,7 @@ const getMovie = (req,res) =>{                                                  
         if (error){                                                                 //checkin for error 
             throw error                                                             //throwing the error
         }
-        res.set('Access-Control-Allow-Origin', 'http://localhost:4200');
+        res.set('Access-Control-Allow-Origin', 'http://localhost:3000');
         res.status(200).json(results.rows)                                          //fetching the results if the connection to database is succefull
     })
 };
