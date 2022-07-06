@@ -7,6 +7,10 @@ import { Injectable } from '@angular/core';
 })
 export class CardService {
   
+  // getKids() {
+  //   throw new Error('Method not implemented.');
+  // }
+  
   baseUrl = "https://api.themoviedb.org/3/discover/movie?api_key=80a33826576591aad78e11cfbde39527&&primary_release_year=2022";
   //APIbaseUrl = "https://api.themoviedb.org/3/discover/movie?api_key=80a33826576591aad78e11cfbde39527&&primary_release_year=2022";
   popUrl = "https://api.themoviedb.org/3/discover/movie?api_key=80a33826576591aad78e11cfbde39527";
@@ -26,4 +30,27 @@ export class CardService {
   // getCardAPI(){
   //   return this.http.get(this.APIbaseUrl);
   // }
+
+  // Dropdown 
+
+
+  getAction(){
+    return this.http.get(this.baseUrl);
+  }
+
+  getComedy(){
+    return this.http.get(this.baseUrl);
+  }
+
+  getDrama(){
+    return this.http.get(this.baseUrl);
+  }
+
+  getFamily(){
+    return this.http.get(this.baseUrl);
+  }
+
+  getKids(){
+    return this.http.get(this.baseUrl);
+  }
 }
