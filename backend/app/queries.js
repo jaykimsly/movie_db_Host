@@ -16,20 +16,21 @@ const getMovie = (req,res) =>{                                                  
         if (error){                                                                 //checkin for error 
             throw error                                                             //throwing the error
         }
-        res.set('Access-Control-Allow-Origin', 'http://localhost:3000');
+        res.set('Access-Control-Allow-Origin', 'http://localhost:4200');
         res.status(200).json(results.rows)                                          //fetching the results if the connection to database is succefull
     })
 };
 
-// const getUserById = (req,res)=>{                                                // function for getting a single user by his/er id
-//     const id = parseInt(req.params.id)                                          // creatign the var id and parsing it as an int for ech request as a pramaterized id 
-//     pool.query('SELECT * FROM users WHERE id = $1',[id],(error,results) => {    // the query for fetching each Id
-//         if (error){                                                             //checkin for error 
-//             throw error                                                         //throwing the error
-//         }
-//         res.status(200).json(results.rows)                                      //fetching the results if the connection to database is succefull
-//     })
-// };
+const getMovieByYear = (req,res)=>{                                                // function for getting a single user by his/er id
+    const release_date = pool(req.params.release_date)                                          // creatign the var id and parsing it as an int for ech request as a pramaterized id 
+    pool.query('SELECT * FROM movies WHERE release_date = $8',[release_date],(error,results) => {    // the query for fetching each Id
+        if (error){                                                             //checkin for error 
+            throw error                                                         //throwing the error
+        }
+        res.set('Access-Control-Allow-Origin', 'http://localhost:4200');
+        res.status(200).json(results.rows)                                    //fetching the results if the connection to database is succefull
+    })
+};
 const createMovie = (req,res) => {
     const {backdrop_path , genre_ids , original_language , original_title , overview , popularity , poster_path , 
         release_date , title , video , vote_average,vote_count} = req.body;
@@ -37,7 +38,7 @@ const createMovie = (req,res) => {
         if(error){
             throw error
         }
-        res.status(201).send(`user added with ID :${results.rows[0]}`);
+        res.status(201).send(`user added with ID :${results.rows[last]}`);
         
     });
 };
@@ -64,7 +65,7 @@ const createMovie = (req,res) => {
 // };
 module.exports = {
     getMovie,
-    // getUserById,
+    getMovieByYear,
     createMovie
     // deleteUser,
     // updateUser

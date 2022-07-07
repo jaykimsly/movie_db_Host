@@ -3,6 +3,10 @@ const app = express();
 const cors=require('cors');
 app.use(cors())
 
+var corsOptions = {
+    origin: "http://localhost:4200",
+    optionsSuccessStatus: 200, // For legacy browser support
+};
 
 //const bodyParser = require('body-parser');
 

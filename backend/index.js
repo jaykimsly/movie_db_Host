@@ -29,7 +29,7 @@ app.get('/', (req,res)=> {
 })
 
 app.get('/movies',db.getMovie);
-// app.get('/movies/:id',db.getMovieById);
+app.get('/movies/:release_date',db.getMovieByYear);
 app.post('/movies',db.createMovie);
 // app.put('/movies/:id',db.updateMovie);
 // app.delete('/movies/:id',db.deleteMovie);
