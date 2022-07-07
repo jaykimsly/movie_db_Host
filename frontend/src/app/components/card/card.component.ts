@@ -7,17 +7,22 @@ import { CardService } from 'src/app/services/card.service';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-
+ term:string | undefined;
 
   Movies!: any[];
   constructor(private card_service: CardService) { }
 
   ngOnInit(): void {
     this.card_service.getCards().subscribe(( respond:any )=>{
-        console.log(respond.results)
 
-        this.Movies = respond.results;
+        console.log(respond)
+        console.log("response")
+
+        
+        this.Movies = respond;
         console.log(this.Movies)
+
+
     })
   }
 

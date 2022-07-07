@@ -27,12 +27,19 @@
             </ul>
           </li>
         </ul>
+        
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn" type="submit">Search</button>
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="term">
+          <button class="btn" type="submit" >Search</button>
+          <tr *ngfor="let movie of movie | filter:term">
+            <td>{{movie.release_date}}</td>
+        </tr>
         </form>
+      
       </div>
+   
   </div>
+
 </nav>
 
 

@@ -6,8 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  //items: string[] = [{ name: "archie" }, { name: "jake" }, { name: "richard" }];
-
+  
  
   count: number = 0;
 

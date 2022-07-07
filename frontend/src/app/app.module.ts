@@ -1,6 +1,5 @@
 import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
- 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +22,7 @@ import { ActionComponent } from './components/action/action.component';
 import { ComedyComponent } from './components/comedy/comedy.component';
 import { DramaComponent } from './components/drama/drama.component';
 import { FamilyComponent } from './components/family/family.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 @NgModule({
@@ -51,7 +51,8 @@ import { FamilyComponent } from './components/family/family.component';
     SuiModule,
     FormsModule,                               // <========== Add this line!
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent],
