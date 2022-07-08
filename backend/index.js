@@ -38,3 +38,18 @@ app.listen(port, ()=>{
 console.log(`App running on Port ${port}`)
 });
 
+
+
+
+const path = require('path');
+
+
+// Serve only the static files form the dist directory
+app.use(express.static('./dist/movie-db'));
+
+app.get('/*', (req, res) =>
+    res.sendFile('index.html', {root: 'dist/movie-db/'}),
+);
+
+// Start the app by listening on the default Heroku port
+app.listen(process.env.PORT || 8080);

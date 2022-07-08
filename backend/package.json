@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "started": "nodemon index.js",
+    "heroku-postbuild": "ng build --prod",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,11 @@
     "cors": "^2.8.5",
     "express": "^4.18.1",
     "node.js": "^0.0.1-security",
+    "path": "^0.12.7",
     "pg": "^8.7.3"
+  },
+  "engines": {
+    "node": "v16.15.1",
+    "npm": "8.13.1"
   }
 }
